@@ -5,14 +5,15 @@ interface UnitItemProps {
   property: string;
   value: number;
   unit?: string;
+  isSmall?: boolean;
 }
 
 export const UnitItem = (props: UnitItemProps) => {
-  const { property, value, unit } = props;
+  const { property, value, unit, isSmall } = props;
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>{property}:</Text>
-      <Text style={styles.text}>
+    <View style={[styles.container, isSmall && { width: "100%" }]}>
+      <Text style={[styles.text, isSmall && styles.textSmall]}>{property}:</Text>
+      <Text style={[styles.text, isSmall && styles.textSmall]}>
         {value} {unit}
       </Text>
     </View>
@@ -29,5 +30,9 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "#fff",
+    paddingTop: 2,
+  },
+  textSmall: {
+    fontSize: 10,
   },
 });
