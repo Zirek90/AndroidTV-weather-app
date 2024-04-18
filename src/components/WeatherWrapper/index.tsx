@@ -21,7 +21,7 @@ export const WeatherWrapper = () => {
         <Button disabled={city.length < 3} title="Search city" onPress={handleSearch} />
       </View>
       <SingleDayCard city={searchedCity} />
-      <MultipleDaysCard />
+      <MultipleDaysCard city={searchedCity} />
     </View>
   );
 };
@@ -44,6 +44,7 @@ const styles = StyleSheet.create({
     borderStyle: "dashed",
     padding: 5,
     borderRadius: 10,
+    backgroundColor: "rgba(0, 0, 0, .1)",
   },
   input: {
     height: 35,
