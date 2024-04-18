@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, Dimensions, ActivityIndicator } from "react-nat
 import React, { useEffect, useState } from "react";
 import { BlurView } from "expo-blur";
 import { useQuery } from "@tanstack/react-query";
-import { getWeather } from "../../api";
+import { getCurrentWeather } from "../../api";
 import { UnitItem } from "../UnitItem";
 import { SingleDayHeader } from "../SingleDayHeader";
 import { Button } from "../shared";
@@ -17,8 +17,8 @@ interface SingleDayCardProps {
 export const SingleDayCard = (props: SingleDayCardProps) => {
   const { city } = props;
   const { data, isLoading, isError } = useQuery({
-    queryKey: ["weather", city],
-    queryFn: () => getWeather(city),
+    queryKey: ["currentWeather", city],
+    queryFn: () => getCurrentWeather(city),
     enabled: city?.length > 3,
   });
   const [showMore, setShowMore] = useState(false);
@@ -78,7 +78,7 @@ export const SingleDayCard = (props: SingleDayCardProps) => {
 
 const styles = StyleSheet.create({
   container: {
-    width: width / 2,
+    width: width * 0.4,
     height: height,
     justifyContent: "center",
     alignItems: "center",
