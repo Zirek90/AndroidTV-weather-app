@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "plugins": [
+      [
+        "@react-native-tvos/config-tv",
+        {
+          "androidTVBanner": "./assets/images/icon-400x240.png",
+          "appleTVImages": {
+            "icon": "./assets/images/icon-1280x768.png",
+            "iconSmall": "./assets/images/icon-400x240.png",
+            "iconSmall2x": "./assets/images/icon-800x480.png",
+            "topShelf": "./assets/images/icon-1920x720.png",
+            "topShelf2x": "./assets/images/icon-3840x1440.png",
+            "topShelfWide": "./assets/images/icon-2320x720.png",
+            "topShelfWide2x": "./assets/images/icon-4640x1440.png"
+          }
+        }
+      ]
+    ],
+    "name": "weather-smart-tv",
+    "slug": "weather-smart-tv",
+    "android": {
+      "package": "com.zirek.weathersmarttv",
+      "runtimeVersion": "1.0.0"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "6c11c72c-d289-4003-adf8-575787ec7d0d"
+      }
+    },
+    "updates": {
+      "url": "https://u.expo.dev/6c11c72c-d289-4003-adf8-575787ec7d0d"
+    },
+    "ios": {
+      "runtimeVersion": {
+        "policy": "appVersion"
+      }
+    }
+  }
+}
