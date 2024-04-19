@@ -1,10 +1,9 @@
-import { View, Text, StyleSheet, Dimensions, ActivityIndicator, Image } from "react-native";
+import { View, Text, StyleSheet, Dimensions, ActivityIndicator } from "react-native";
 import { useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { getFutureWeather } from "../../api";
-import { getDateOfTheWeek, filterFirstRecordOfDay, capitalize, getDate } from "../../utils";
+import { filterFirstRecordOfDay, capitalize } from "../../utils";
 import { BlurView } from "expo-blur";
-import { AdditionalMultipleDaysUnitList } from "../AdditinalMultipleDaysUnitList";
 import { MultipleDaysCard } from "../MultipleDaysCard";
 
 const { height, width } = Dimensions.get("screen");

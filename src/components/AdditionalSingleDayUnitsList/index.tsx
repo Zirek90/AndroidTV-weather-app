@@ -2,9 +2,10 @@ import { View } from "react-native";
 import { useState } from "react";
 import { UnitItem } from "../UnitItem";
 import { Button } from "../shared";
+import { SingleDayResponse } from "../../interface";
 
 interface AdditionalUnitsListProps {
-  data: any;
+  data: SingleDayResponse;
 }
 
 export const AdditionalSingleDayUnitsList = (props: AdditionalUnitsListProps) => {

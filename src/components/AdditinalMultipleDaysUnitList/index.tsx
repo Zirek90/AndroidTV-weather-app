@@ -1,12 +1,12 @@
-import { View, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 import { useState } from "react";
 import { Button } from "../shared";
-import { UnitItem } from "../UnitItem";
 import { UnitsList } from "../UnitsList";
+import { MultipleDaysListResponse, SingleDayResponse } from "../../interface";
 
 interface AdditionalMultipleDaysUnitListProps {
   idx: number;
-  item: any;
+  item: SingleDayResponse | MultipleDaysListResponse;
 }
 
 export const AdditionalMultipleDaysUnitList = (props: AdditionalMultipleDaysUnitListProps) => {

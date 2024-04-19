@@ -1,8 +1,9 @@
 import { View } from "react-native";
 import { UnitItem } from "../UnitItem";
+import { MultipleDaysListResponse, SingleDayResponse } from "../../interface";
 
 interface UnitsListProps {
-  data: any;
+  data: SingleDayResponse | MultipleDaysListResponse;
   withTemperature?: boolean;
   withAdditional?: boolean;
   isSmall?: boolean;

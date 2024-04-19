@@ -1,8 +1,9 @@
 import { Text, Image, StyleSheet } from "react-native";
 import { getDate, getDateOfTheWeek } from "../../utils";
+import { MultipleDaysListResponse } from "../../interface";
 
 interface MultipleDaysHeaderProps {
-  item: any;
+  item: MultipleDaysListResponse;
 }
 
 export const MultipleDaysHeader = (props: MultipleDaysHeaderProps) => {

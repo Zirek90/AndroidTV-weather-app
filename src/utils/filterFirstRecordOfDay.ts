@@ -1,4 +1,6 @@
-export const filterFirstRecordOfDay = (data) => {
+import { MultipleDaysResponse } from "../interface";
+
+export const filterFirstRecordOfDay = (data: MultipleDaysResponse) => {
   const filteredData = [];
   const processedDays = new Set(); // Keep track of processed days
 
@@ -10,16 +12,6 @@ export const filterFirstRecordOfDay = (data) => {
       // Mark this day as processed
       processedDays.add(date.toDateString());
     }
-
-    // const day = date.toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
-
-    // Check if this day has already been processed
-    // if (!processedDays.has(day)) {
-    //   // Add this record to filteredData
-    //   filteredData.push(record);
-    //   // Mark this day as processed
-    //   processedDays.add(day);
-    // }
   }
   return filteredData;
 };
