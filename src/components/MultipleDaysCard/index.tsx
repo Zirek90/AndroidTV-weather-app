@@ -58,6 +58,7 @@ export const MultipleDaysCard = (props: MultipleDaysCardProps) => {
                 style={styles.icon}
                 source={{ uri: `${process.env.EXPO_PUBLIC_ICON_URL}${item.weather[0].icon}.png` }}
               />
+              <Text style={{ color: "#fff", fontSize: 13 }}>{item.main.temp} °C</Text>
               <Text style={{ color: "#fff", fontSize: 15, marginBottom: 5 }}>{item.weather[0].main || ""}</Text>
 
               <Button
@@ -69,7 +70,6 @@ export const MultipleDaysCard = (props: MultipleDaysCardProps) => {
 
               {shownIdx.includes(idx) && (
                 <View>
-                  <UnitItem property="Temp" value={item.main.temp} unit="°C" isSmall />
                   <UnitItem property="Feels like" value={item.main.feels_like} unit="°C" isSmall />
                   <UnitItem property="Minimal" value={item.main.temp_min} unit="°C" isSmall />
                   <UnitItem property="Maximum" value={item.main.temp_max} unit="°C" isSmall />
