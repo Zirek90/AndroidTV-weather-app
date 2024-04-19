@@ -47,12 +47,15 @@ export const SingleDayCard = (props: SingleDayCardProps) => {
 
   return (
     <View style={styles.container}>
-      <BlurView intensity={10} style={styles.blurView} tint="dark" experimentalBlurMethod="dimezisBlurView">
-        <View style={styles.wrapper}>
-          <SingleDayHeader icon={data.weather[0].icon} description={data.weather[0].main} city={data.name} />
-          <UnitsList data={data} />
-          <AdditionalUnitsList data={data} />
-        </View>
+      <BlurView
+        intensity={10}
+        style={[styles.blurView, styles.wrapper]}
+        tint="dark"
+        experimentalBlurMethod="dimezisBlurView"
+      >
+        <SingleDayHeader icon={data.weather[0].icon} description={data.weather[0].main} city={data.name} />
+        <UnitsList data={data} />
+        <AdditionalUnitsList data={data} />
       </BlurView>
     </View>
   );
