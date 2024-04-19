@@ -1,5 +1,4 @@
 import { Pressable, StyleProp, StyleSheet, Text, TextStyle, ViewStyle } from "react-native";
-import React from "react";
 
 interface PressableProps {
   title: string;

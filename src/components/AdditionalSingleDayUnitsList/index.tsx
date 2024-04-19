@@ -1,5 +1,5 @@
-import { View, Text } from "react-native";
-import React, { useState } from "react";
+import { View } from "react-native";
+import { useState } from "react";
 import { UnitItem } from "../UnitItem";
 import { Button } from "../shared";
 
@@ -7,7 +7,7 @@ interface AdditionalUnitsListProps {
   data: any;
 }
 
-export const AdditionalUnitsList = (props: AdditionalUnitsListProps) => {
+export const AdditionalSingleDayUnitsList = (props: AdditionalUnitsListProps) => {
   const { data } = props;
   const [showMore, setShowMore] = useState(false);
 

@@ -1,14 +1,12 @@
 import { View, Text, StyleSheet, Dimensions, ActivityIndicator } from "react-native";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { BlurView } from "expo-blur";
 import { useQuery } from "@tanstack/react-query";
 import { getCurrentWeather } from "../../api";
-import { UnitItem } from "../UnitItem";
-import { SingleDayHeader } from "../SingleDayHeader";
-import { Button } from "../shared";
 import { useBackgroundContext } from "../../context";
+import { SingleDayHeader } from "../SingleDayHeader";
 import { UnitsList } from "../UnitsList";
-import { AdditionalUnitsList } from "../AdditionalUnitsList";
+import { AdditionalSingleDayUnitsList } from "../AdditionalSingleDayUnitsList";
 
 const { height, width } = Dimensions.get("screen");
 
@@ -55,7 +53,7 @@ export const SingleDayCard = (props: SingleDayCardProps) => {
       >
         <SingleDayHeader icon={data.weather[0].icon} description={data.weather[0].main} city={data.name} />
         <UnitsList data={data} />
-        <AdditionalUnitsList data={data} />
+        <AdditionalSingleDayUnitsList data={data} />
       </BlurView>
     </View>
   );

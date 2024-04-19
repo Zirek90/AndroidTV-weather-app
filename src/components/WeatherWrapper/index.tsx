@@ -1,7 +1,7 @@
 import { View, StyleSheet } from "react-native";
-import React, { useState } from "react";
+import { useState } from "react";
 import { SingleDayCard } from "../SingleDayCard";
-import { MultipleDaysCard } from "../MultipleDaysCard";
+import { MultipleDaysCards } from "../MultipleDaysCards";
 import { UpperForm } from "../UpperForm";
 
 export const WeatherWrapper = () => {
@@ -14,7 +14,7 @@ export const WeatherWrapper = () => {
     <View style={styles.container}>
       <UpperForm handleSearch={handleSearch} />
       <SingleDayCard city={searchedCity} />
-      <MultipleDaysCard city={searchedCity} />
+      <MultipleDaysCards city={searchedCity} />
     </View>
   );
 };
