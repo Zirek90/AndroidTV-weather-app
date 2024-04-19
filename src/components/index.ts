@@ -5,3 +5,4 @@ export * from "./SingleDayHeader";
 export * from "./WeatherWrapper";
 export * from "./UnitsList";
 export * from "./AdditionalUnitsList";
+export * from "./UpperForm";

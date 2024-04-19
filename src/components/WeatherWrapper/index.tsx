@@ -1,25 +1,18 @@
-import { View, StyleSheet, TextInput } from "react-native";
+import { View, StyleSheet } from "react-native";
 import React, { useState } from "react";
 import { SingleDayCard } from "../SingleDayCard";
 import { MultipleDaysCard } from "../MultipleDaysCard";
-import { Button } from "../shared";
+import { UpperForm } from "../UpperForm";
 
 export const WeatherWrapper = () => {
-  const [city, setCity] = useState("Kraków");
-  const [searchedCity, setSearchedCity] = useState(city);
+  const [searchedCity, setSearchedCity] = useState("Kraków");
 
-  const handleCity = (c: string) => {
-    setCity(c);
-  };
-  const handleSearch = () => {
+  const handleSearch = (city: string) => {
     setSearchedCity(city);
   };
   return (
     <View style={styles.container}>
-      <View style={styles.form}>
-        <TextInput style={styles.input} onChangeText={handleCity} value={city} />
-        <Button disabled={city.length < 3} title="Search city" onPress={handleSearch} />
-      </View>
+      <UpperForm handleSearch={handleSearch} />
       <SingleDayCard city={searchedCity} />
       <MultipleDaysCard city={searchedCity} />
     </View>
