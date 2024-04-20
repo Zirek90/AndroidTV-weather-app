@@ -24,7 +24,7 @@ export const AdditionalSingleDayUnitsList = (props: AdditionalUnitsListProps) =>
           <UnitItem property="Clouds" value={data.clouds.all} unit="%" />
         </View>
       )}
-      <Button title={showMore ? "Show more" : "Hide"} onPress={toggleShowMore} />
+      <Button title={showMore ? "Hide" : "Show more"} onPress={toggleShowMore} />
     </>
   );
 };
