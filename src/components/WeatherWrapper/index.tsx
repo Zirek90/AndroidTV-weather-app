@@ -13,42 +13,19 @@ export const WeatherWrapper = () => {
   return (
     <View style={styles.container}>
       <UpperForm handleSearch={handleSearch} />
-      <SingleDayCard city={searchedCity} />
-      <MultipleDaysCards city={searchedCity} />
+      <View style={styles.wrapper}>
+        <SingleDayCard city={searchedCity} />
+        <MultipleDaysCards city={searchedCity} />
+      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    flexDirection: "row",
     alignItems: "center",
-    justifyContent: "center",
-    zIndex: 1,
   },
-  form: {
+  wrapper: {
     flexDirection: "row",
-    position: "absolute",
-    alignItems: "center",
-    top: 20,
-    borderWidth: 1,
-    borderColor: "#fff",
-    borderStyle: "dashed",
-    padding: 5,
-    borderRadius: 10,
-    backgroundColor: "rgba(0, 0, 0, .1)",
-  },
-  input: {
-    height: 35,
-    marginRight: 10,
-    borderWidth: 1,
-    width: 200,
-    backgroundColor: "rgba(256, 256, 256, .3)",
-    borderRadius: 10,
-    borderColor: "#fff",
-    color: "#fff",
-    textAlign: "center",
-    zIndex: 99,
   },
 });

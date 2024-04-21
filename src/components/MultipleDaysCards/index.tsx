@@ -40,12 +40,14 @@ export const MultipleDaysCards = (props: MultipleDaysCardProps) => {
   }
 
   return (
-    <View style={styles.wrapper}>
-      <Text style={styles.header}>{capitalize(city)}</Text>
+    <View style={styles.container}>
       <BlurView intensity={10} style={styles.blurView} tint="dark" experimentalBlurMethod="dimezisBlurView">
-        {filteredData.map((item, idx) => (
-          <MultipleDaysCard key={item.dt} item={item} idx={idx} />
-        ))}
+        <Text style={styles.header}>{capitalize(city)}</Text>
+        <View style={styles.blueViewWrapper}>
+          {filteredData.map((item, idx) => (
+            <MultipleDaysCard key={item.dt} item={item} idx={idx} />
+          ))}
+        </View>
       </BlurView>
     </View>
   );
@@ -53,26 +55,21 @@ export const MultipleDaysCards = (props: MultipleDaysCardProps) => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    zIndex: 1,
-  },
-  wrapper: {
     width: width * 0.6,
     height: height,
-    alignItems: "center",
-    marginTop: width * 0.15,
+    marginTop: 50,
   },
   header: {
     color: "#fff",
     fontSize: 30,
-    padding: 25,
+    padding: 10,
+    textAlign: "center",
   },
   blurView: {
     borderRadius: 25,
     overflow: "hidden",
+  },
+  blueViewWrapper: {
     flexDirection: "row",
   },
 });

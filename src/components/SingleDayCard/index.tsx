@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
   container: {
     width: width * 0.4,
     height: height,
-    justifyContent: "center",
+    marginTop: 50,
     alignItems: "center",
   },
   blurView: {

@@ -36,7 +36,7 @@ export const BackgroundProvider = ({ children }: PropsWithChildren) => {
   const handleWeatherChange = (weather: WeatherEnum) => {
     if (currentWeather === weather) return;
 
-    setCurrentWeather(weather);
+    // setCurrentWeather(weather);
   };
 
   return (
