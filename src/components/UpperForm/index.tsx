@@ -24,7 +24,6 @@ export const UpperForm = (props: UpperFormProps) => {
 const styles = StyleSheet.create({
   form: {
     flexDirection: "row",
-    // position: "absolute",
     alignItems: "center",
     top: 20,
     borderWidth: 1,
