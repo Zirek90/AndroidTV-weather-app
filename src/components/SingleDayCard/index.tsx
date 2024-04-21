@@ -7,6 +7,7 @@ import { useBackgroundContext } from "../../context";
 import { SingleDayHeader } from "../SingleDayHeader";
 import { UnitsList } from "../UnitsList";
 import { AdditionalSingleDayUnitsList } from "../AdditionalSingleDayUnitsList";
+import { ErrorMessage } from "../ErrrorMessage";
 
 const { height, width } = Dimensions.get("screen");
 
@@ -36,11 +37,7 @@ export const SingleDayCard = (props: SingleDayCardProps) => {
   }
 
   if (isError || !data || data?.cod == 404) {
-    return (
-      <View style={styles.container}>
-        <Text>Cannot fetch weather for the given city</Text>
-      </View>
-    );
+    return <ErrorMessage msg={data.message || "Cannot fetch weather for the given city"} />;
   }
 
   return (

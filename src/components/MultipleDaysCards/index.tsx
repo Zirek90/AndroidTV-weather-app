@@ -5,6 +5,7 @@ import { getFutureWeather } from "../../api";
 import { filterFirstRecordOfDay, capitalize } from "../../utils";
 import { BlurView } from "expo-blur";
 import { MultipleDaysCard } from "../MultipleDaysCard";
+import { ErrorMessage } from "../ErrrorMessage";
 
 const { height, width } = Dimensions.get("screen");
 
@@ -32,11 +33,7 @@ export const MultipleDaysCards = (props: MultipleDaysCardProps) => {
   }
 
   if (isError || !data || data?.cod == 404) {
-    return (
-      <View style={styles.container}>
-        <Text>Cannot fetch weather for the given city</Text>
-      </View>
-    );
+    return <ErrorMessage msg={data.message || "Cannot fetch weather for the given city"} />;
   }
 
   return (
