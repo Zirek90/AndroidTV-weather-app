@@ -1,8 +1,8 @@
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
-import { WeatherWrapper } from "./src/components";
 import { BackgroundProvider } from "./src/context";
 import { useEffect } from "react";
 import * as Updates from "expo-updates";
+import { WeatherWrapper } from "./src/components/WeatherWrapper";
 
 export default function App() {
   const queryClient = new QueryClient();

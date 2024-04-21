@@ -1,21 +1,27 @@
-import { View, Text, StyleSheet, Dimensions } from "react-native";
-import React from "react";
+import { StyleSheet, View } from "react-native";
+import { AdditionalMultipleDaysUnitList } from "../AdditinalMultipleDaysUnitList";
+import { MultipleDaysHeader } from "../MultipleDaysHeader";
+import { MultipleDaysListResponse } from "../../interface";
 
-const { height, width } = Dimensions.get("screen");
+interface MultipleDaysCardProps {
+  item: MultipleDaysListResponse;
+  idx: number;
+}
 
-export const MultipleDaysCard = () => {
+export const MultipleDaysCard = (props: MultipleDaysCardProps) => {
+  const { idx, item } = props;
   return (
-    <View style={styles.wrapper}>
-      <Text style={{ color: "#fff" }}>Component two</Text>
+    <View style={styles.container}>
+      <MultipleDaysHeader item={item} />
+      <AdditionalMultipleDaysUnitList idx={idx} item={item} />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  wrapper: {
-    width: width / 2,
-    height: height,
-    justifyContent: "center",
+  container: {
+    width: 90,
+    margin: 10,
     alignItems: "center",
   },
 });

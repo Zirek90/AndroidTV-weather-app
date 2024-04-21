@@ -10,6 +10,10 @@ const apiCallGeneratorl = async (endpoints: string) => {
     console.error(err);
   }
 };
-export const getWeather = async (city: string) => {
-  return await apiCallGeneratorl(`${baseURL}q=${city}&units=metric&appid=${apiKey}`);
+export const getCurrentWeather = async (city: string) => {
+  return await apiCallGeneratorl(`${baseURL}weather?q=${city}&units=metric&appid=${apiKey}`);
+};
+
+export const getFutureWeather = async (city: string) => {
+  return await apiCallGeneratorl(`${baseURL}forecast?q=${city}&units=metric&appid=${apiKey}`); // cnt for weather for 5 days
 };

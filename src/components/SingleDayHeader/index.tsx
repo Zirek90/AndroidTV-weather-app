@@ -1,5 +1,4 @@
-import { View, Text, Dimensions, StyleSheet, Image } from "react-native";
-import React from "react";
+import { View, Text, StyleSheet, Image } from "react-native";
 
 interface SingleDayHeaderProps {
   icon: string;
