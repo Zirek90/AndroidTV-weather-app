@@ -13,7 +13,8 @@
       "channel": "preview",
       "android": {
         "buildType": "apk"
-      }
+      },
+      "env": {}
     },
     "production": {
       "channel": "production"

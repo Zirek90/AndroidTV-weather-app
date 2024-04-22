@@ -10,7 +10,10 @@ export const SingleDayHeader = (props: SingleDayHeaderProps) => {
   const { icon, description, city } = props;
   return (
     <View style={styles.container}>
-      <Image style={styles.icon} source={{ uri: `${process.env.EXPO_PUBLIC_ICON_URL}${icon}.png` }} />
+      <Image
+        style={styles.icon}
+        source={{ uri: `${process.env.EXPO_PUBLIC_ICON_URL}${icon}.png` }}
+      />
       <Text style={{ color: "#fff", fontSize: 20 }}>{description || ""}</Text>
       <Text style={{ color: "#fff", fontSize: 24 }}>{city}</Text>
     </View>

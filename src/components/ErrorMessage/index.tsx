@@ -1,4 +1,4 @@
-import { Text, StyleSheet, View } from "react-native";
+import { Text, StyleSheet } from "react-native";
 import React from "react";
 import { BlurView } from "expo-blur";
 
@@ -9,7 +9,11 @@ interface ErrorMessageProps {
 export const ErrorMessage = (props: ErrorMessageProps) => {
   const { msg } = props;
   return (
-    <BlurView intensity={20} style={styles.container} tint="dark" experimentalBlurMethod="dimezisBlurView">
+    <BlurView
+      intensity={20}
+      style={styles.container}
+      tint="dark"
+      experimentalBlurMethod="dimezisBlurView">
       <Text style={styles.text}>{msg}</Text>
     </BlurView>
   );

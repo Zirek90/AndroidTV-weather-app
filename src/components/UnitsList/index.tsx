@@ -13,7 +13,9 @@ export const UnitsList = (props: UnitsListProps) => {
   const { data, withAdditional, withTemperature = true, isSmall } = props;
   return (
     <View>
-      {withTemperature && <UnitItem property="Temperature" value={data.main.temp} unit="°C" isSmall={isSmall} />}
+      {withTemperature && (
+        <UnitItem property="Temperature" value={data.main.temp} unit="°C" isSmall={isSmall} />
+      )}
       <UnitItem property="Feels like" value={data.main.feels_like} unit="°C" isSmall={isSmall} />
       <UnitItem property="Minimal" value={data.main.temp_min} unit="°C" isSmall={isSmall} />
       <UnitItem property="Maximum" value={data.main.temp_max} unit="°C" isSmall={isSmall} />

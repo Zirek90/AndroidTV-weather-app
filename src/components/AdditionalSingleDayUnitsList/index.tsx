@@ -13,7 +13,7 @@ export const AdditionalSingleDayUnitsList = (props: AdditionalUnitsListProps) =>
   const [showMore, setShowMore] = useState(false);
 
   const toggleShowMore = () => {
-    setShowMore((prev) => !prev);
+    setShowMore(prev => !prev);
   };
 
   return (

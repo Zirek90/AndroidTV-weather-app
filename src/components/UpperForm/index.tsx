@@ -1,18 +1,26 @@
 import { View, TextInput, StyleSheet } from "react-native";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "../shared";
+import { UseAsyncStorage } from "../../hook";
 
 interface UpperFormProps {
   handleSearch: (city: string) => void;
 }
 
 export const UpperForm = (props: UpperFormProps) => {
+  const { storedCity } = UseAsyncStorage();
   const { handleSearch } = props;
-  const [city, setCity] = useState("Kraków");
+  const [city, setCity] = useState("");
+
+  useEffect(() => {
+    setCity(storedCity);
+    handleSearch(storedCity);
+  }, [handleSearch, storedCity]);
 
   const handleCity = (c: string) => {
     setCity(c);
   };
+
   return (
     <View style={styles.form}>
       <TextInput style={styles.input} onChangeText={handleCity} value={city} />

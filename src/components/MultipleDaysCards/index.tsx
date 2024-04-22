@@ -5,7 +5,7 @@ import { getFutureWeather } from "../../api";
 import { filterFirstRecordOfDay, capitalize } from "../../utils";
 import { BlurView } from "expo-blur";
 import { MultipleDaysCard } from "../MultipleDaysCard";
-import { ErrorMessage } from "../ErrrorMessage";
+import { ErrorMessage } from "../ErrorMessage";
 
 const { height, width } = Dimensions.get("screen");
 
@@ -32,13 +32,17 @@ export const MultipleDaysCards = (props: MultipleDaysCardProps) => {
     return <ActivityIndicator size="large" />;
   }
 
-  if (isError || !data || data?.cod == 404) {
-    return <ErrorMessage msg={data.message || "Cannot fetch weather for the given city"} />;
+  if (isError || !data || data?.cod === 404) {
+    return <ErrorMessage msg={data?.message || "Cannot fetch weather for the given city"} />;
   }
 
   return (
     <View style={styles.container}>
-      <BlurView intensity={10} style={styles.blurView} tint="dark" experimentalBlurMethod="dimezisBlurView">
+      <BlurView
+        intensity={10}
+        style={styles.blurView}
+        tint="dark"
+        experimentalBlurMethod="dimezisBlurView">
         <Text style={styles.header}>{capitalize(city)}</Text>
         <View style={styles.blueViewWrapper}>
           {filteredData.map((item, idx) => (
@@ -53,7 +57,7 @@ export const MultipleDaysCards = (props: MultipleDaysCardProps) => {
 const styles = StyleSheet.create({
   container: {
     width: width * 0.6,
-    height: height,
+    height,
     marginTop: 50,
   },
   header: {
