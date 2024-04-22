@@ -4,6 +4,8 @@
       [
         "@react-native-tvos/config-tv",
         {
+          "removeFlipperOnAndroid": true,
+          "icon": "./assets/images/icon-400x240.png",
           "androidTVBanner": "./assets/images/icon-400x240.png",
           "appleTVImages": {
             "icon": "./assets/images/icon-1280x768.png",
@@ -19,6 +21,12 @@
     ],
     "name": "weather-smart-tv",
     "slug": "weather-smart-tv",
+    "icon": "./assets/images/icon-1280x768.png",
+    "splash": {
+      "image": "./assets/images/icon-1280x768.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#000000"
+    },
     "android": {
       "package": "com.zirek.weathersmarttv",
       "runtimeVersion": "1.0.0"
