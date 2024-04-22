@@ -12,9 +12,16 @@ export const MultipleDaysHeader = (props: MultipleDaysHeaderProps) => {
     <>
       <Text style={[styles.textColor, styles.text]}>{getDateOfTheWeek(item.dt_txt)}</Text>
       <Text style={[styles.textColor, styles.smallText]}>{getDate(item.dt_txt)}</Text>
-      <Image style={styles.icon} source={{ uri: `${process.env.EXPO_PUBLIC_ICON_URL}${item.weather[0].icon}.png` }} />
+      <Image
+        style={styles.icon}
+        source={{
+          uri: `${process.env.EXPO_PUBLIC_ICON_URL}${item.weather[0].icon}.png`,
+        }}
+      />
       <Text style={[styles.textColor, styles.smallText]}>{item.main.temp} °C</Text>
-      <Text style={[styles.textColor, styles.text, { marginBottom: 5 }]}>{item.weather[0].main}</Text>
+      <Text style={[styles.textColor, styles.text, { marginBottom: 5 }]}>
+        {item.weather[0].main}
+      </Text>
     </>
   );
 };

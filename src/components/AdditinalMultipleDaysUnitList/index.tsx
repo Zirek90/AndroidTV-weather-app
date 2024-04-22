@@ -12,8 +12,12 @@ interface AdditionalMultipleDaysUnitListProps {
 export const AdditionalMultipleDaysUnitList = (props: AdditionalMultipleDaysUnitListProps) => {
   const { idx, item } = props;
   const [shownIdx, setShownIdx] = useState([]);
-  const handleShownIdx = (idx: number) => {
-    setShownIdx((prev) => (prev.includes(idx) ? prev.filter((item) => item !== idx) : [...prev, idx]));
+  const handleShownIdx = (currentIdx: number) => {
+    setShownIdx(prev =>
+      prev.includes(currentIdx)
+        ? prev.filter(curretItem => curretItem !== currentIdx)
+        : [...prev, currentIdx],
+    );
   };
   return (
     <>
@@ -24,7 +28,9 @@ export const AdditionalMultipleDaysUnitList = (props: AdditionalMultipleDaysUnit
         textStyles={styles.buttonText}
       />
 
-      {shownIdx.includes(idx) && <UnitsList data={item} withAdditional withTemperature={false} isSmall />}
+      {shownIdx.includes(idx) && (
+        <UnitsList data={item} withAdditional withTemperature={false} isSmall />
+      )}
     </>
   );
 };

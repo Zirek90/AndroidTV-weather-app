@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Dimensions, ActivityIndicator } from "react-native";
+import { View, StyleSheet, Dimensions, ActivityIndicator } from "react-native";
 import React, { useEffect } from "react";
 import { BlurView } from "expo-blur";
 import { useQuery } from "@tanstack/react-query";
@@ -7,7 +7,7 @@ import { useBackgroundContext } from "../../context";
 import { SingleDayHeader } from "../SingleDayHeader";
 import { UnitsList } from "../UnitsList";
 import { AdditionalSingleDayUnitsList } from "../AdditionalSingleDayUnitsList";
-import { ErrorMessage } from "../ErrrorMessage";
+import { ErrorMessage } from "../ErrorMessage";
 
 const { height, width } = Dimensions.get("screen");
 
@@ -25,7 +25,7 @@ export const SingleDayCard = (props: SingleDayCardProps) => {
   const { handleWeatherChange } = useBackgroundContext();
 
   useEffect(() => {
-    if (!data || data?.cod == 404) {
+    if (!data || data?.cod === 404) {
       return;
     }
 
@@ -36,8 +36,12 @@ export const SingleDayCard = (props: SingleDayCardProps) => {
     return <ActivityIndicator size="large" />;
   }
 
-  if (isError || !data || data?.cod == 404) {
-    return <ErrorMessage msg={data.message || "Cannot fetch weather for the given city"} />;
+  if (isError || !data || data?.cod === 404) {
+    return (
+      <ErrorMessage
+        msg={data.message || "Cannot fetch weather for the given city"}
+      />
+    );
   }
 
   return (
@@ -48,7 +52,11 @@ export const SingleDayCard = (props: SingleDayCardProps) => {
         tint="dark"
         experimentalBlurMethod="dimezisBlurView"
       >
-        <SingleDayHeader icon={data.weather[0].icon} description={data.weather[0].main} city={data.name} />
+        <SingleDayHeader
+          icon={data.weather[0].icon}
+          description={data.weather[0].main}
+          city={data.name}
+        />
         <UnitsList data={data} />
         <AdditionalSingleDayUnitsList data={data} />
       </BlurView>
@@ -59,7 +67,7 @@ export const SingleDayCard = (props: SingleDayCardProps) => {
 const styles = StyleSheet.create({
   container: {
     width: width * 0.4,
-    height: height,
+    height,
     marginTop: 50,
     alignItems: "center",
   },
