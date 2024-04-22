@@ -33,7 +33,7 @@ export const MultipleDaysCards = (props: MultipleDaysCardProps) => {
   }
 
   if (isError || !data || data?.cod === 404) {
-    return <ErrorMessage msg={data.message || "Cannot fetch weather for the given city"} />;
+    return <ErrorMessage msg={data?.message || "Cannot fetch weather for the given city"} />;
   }
 
   return (

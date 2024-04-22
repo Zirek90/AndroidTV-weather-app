@@ -37,11 +37,7 @@ export const SingleDayCard = (props: SingleDayCardProps) => {
   }
 
   if (isError || !data || data?.cod === 404) {
-    return (
-      <ErrorMessage
-        msg={data.message || "Cannot fetch weather for the given city"}
-      />
-    );
+    return <ErrorMessage msg={data?.message || "Cannot fetch weather for the given city"} />;
   }
 
   return (
@@ -50,8 +46,7 @@ export const SingleDayCard = (props: SingleDayCardProps) => {
         intensity={10}
         style={[styles.blurView, styles.wrapper]}
         tint="dark"
-        experimentalBlurMethod="dimezisBlurView"
-      >
+        experimentalBlurMethod="dimezisBlurView">
         <SingleDayHeader
           icon={data.weather[0].icon}
           description={data.weather[0].main}

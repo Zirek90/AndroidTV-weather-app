@@ -1,8 +1,9 @@
 import { View, StyleSheet } from "react-native";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { SingleDayCard } from "../SingleDayCard";
 import { MultipleDaysCards } from "../MultipleDaysCards";
 import { UpperForm } from "../UpperForm";
+import { UseAsyncStorage } from "../../hook";
 
 interface WeatherWrapperProps {
   prepareSplashScreen: () => void;
@@ -10,11 +11,17 @@ interface WeatherWrapperProps {
 
 export const WeatherWrapper = (props: WeatherWrapperProps) => {
   const { prepareSplashScreen } = props;
-  const [searchedCity, setSearchedCity] = useState("Kraków");
+  const { setData } = UseAsyncStorage();
+  const [searchedCity, setSearchedCity] = useState("");
 
-  const handleSearch = (city: string) => {
-    setSearchedCity(city);
-  };
+  const handleSearch = useCallback(
+    (city: string) => {
+      setSearchedCity(city);
+      setData(city);
+    },
+    [setData],
+  );
+
   return (
     <View style={styles.container} onLayout={prepareSplashScreen}>
       <UpperForm handleSearch={handleSearch} />
