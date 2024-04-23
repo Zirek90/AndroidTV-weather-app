@@ -1,6 +1,6 @@
 import i18n from "../i18n";
 
-export const getDateOfTheWeek = (dateString: string) => {
+export const getDateOfTheWeek = (dateString: string | Date = new Date()) => {
   const date = new Date(dateString);
   const dayOfWeek = date.getDay();
   const daysOfWeek = [
