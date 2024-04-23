@@ -1,0 +1,21 @@
+{
+  "buttons": {
+    "inputButton": "Cari kota",
+    "toggleHideButton": "Bersembunyi",
+    "toggleShowButton": "Menampilkan lebih banyak"
+  },
+  "units": {
+    "temperature": "Suhu",
+    "feels_like": "Terasa seperti",
+    "minimal": "Minimal",
+    "maximum": "Maksimum",
+    "pressure": "Tekanan",
+    "humidity": "Kelembaban",
+    "wind": "Angin",
+    "clouds": "Awan"
+  },
+  "errors": {
+    "updateAlertError": "Terjadi kesalahan saat mengambil pembaruan Expo terbaru: ",
+    "fetchError": "Tidak dapat mengambil cuaca untuk kota tertentu"
+  }
+}

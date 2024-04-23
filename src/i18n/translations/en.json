@@ -1,0 +1,21 @@
+{
+  "buttons": {
+    "inputButton": "Search city",
+    "toggleHideButton": "Hide",
+    "toggleShowButton": "Show more"
+  },
+  "units": {
+    "temperature": "Temperature",
+    "feels_like": "Feels like",
+    "minimal": "Minimal",
+    "maximum": "Maximum",
+    "pressure": "Pressure",
+    "humidity": "Humidity",
+    "wind": "Wind",
+    "clouds": "Clouds"
+  },
+  "errors": {
+    "updateAlertError": "Error fetching latest Expo update: ",
+    "fetchError": "Cannot fetch weather for the given city"
+  }
+}
