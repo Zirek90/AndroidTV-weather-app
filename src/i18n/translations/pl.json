@@ -17,5 +17,14 @@
   "errors": {
     "updateAlertError": "Nie można pobrać najnowszej aktualizacji: ",
     "fetchError": "Nie można pobrać pogody dla podanego miasta"
+  },
+  "weekdays": {
+    "sunday": "Niedziela",
+    "monday": "Poniedziałek",
+    "tuesday": "Wtorek",
+    "wednesday": "Środa",
+    "thursday": "Czwartek",
+    "friday": "Piątek",
+    "saturday": "Sobota"
   }
 }

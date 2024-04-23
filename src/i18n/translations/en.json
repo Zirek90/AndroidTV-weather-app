@@ -17,5 +17,14 @@
   "errors": {
     "updateAlertError": "Error fetching latest Expo update: ",
     "fetchError": "Cannot fetch weather for the given city"
+  },
+  "weekdays": {
+    "sunday": "Sunday",
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday"
   }
 }
