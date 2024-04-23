@@ -8,6 +8,7 @@ import { SingleDayHeader } from "../SingleDayHeader";
 import { UnitsList } from "../UnitsList";
 import { AdditionalSingleDayUnitsList } from "../AdditionalSingleDayUnitsList";
 import { ErrorMessage } from "../ErrorMessage";
+import { useTranslation } from "react-i18next";
 
 const { height, width } = Dimensions.get("screen");
 
@@ -17,6 +18,7 @@ interface SingleDayCardProps {
 
 export const SingleDayCard = (props: SingleDayCardProps) => {
   const { city } = props;
+  const { t } = useTranslation();
   const { data, isLoading, isError } = useQuery({
     queryKey: ["currentWeather", city],
     queryFn: () => getCurrentWeather(city),
@@ -37,7 +39,7 @@ export const SingleDayCard = (props: SingleDayCardProps) => {
   }
 
   if (isError || !data || data?.cod === 404) {
-    return <ErrorMessage msg={data?.message || "Cannot fetch weather for the given city"} />;
+    return <ErrorMessage msg={data?.message || t("errors.updateAlertError")} />;
   }
 
   return (

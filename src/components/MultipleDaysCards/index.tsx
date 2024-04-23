@@ -6,6 +6,7 @@ import { filterFirstRecordOfDay, capitalize } from "../../utils";
 import { BlurView } from "expo-blur";
 import { MultipleDaysCard } from "../MultipleDaysCard";
 import { ErrorMessage } from "../ErrorMessage";
+import { useTranslation } from "react-i18next";
 
 const { height, width } = Dimensions.get("screen");
 
@@ -15,6 +16,7 @@ interface MultipleDaysCardProps {
 
 export const MultipleDaysCards = (props: MultipleDaysCardProps) => {
   const { city } = props;
+  const { t } = useTranslation();
   const { data, isLoading, isError } = useQuery({
     queryKey: ["futureWather", city],
     queryFn: () => getFutureWeather(city),
@@ -33,7 +35,7 @@ export const MultipleDaysCards = (props: MultipleDaysCardProps) => {
   }
 
   if (isError || !data || data?.cod === 404) {
-    return <ErrorMessage msg={data?.message || "Cannot fetch weather for the given city"} />;
+    return <ErrorMessage msg={data?.message || t("errors.updateAlertError")} />;
   }
 
   return (

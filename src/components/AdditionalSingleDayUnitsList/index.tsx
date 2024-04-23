@@ -3,6 +3,7 @@ import { useState } from "react";
 import { UnitItem } from "../UnitItem";
 import { Button } from "../shared";
 import { SingleDayResponse } from "../../interface";
+import { useTranslation } from "react-i18next";
 
 interface AdditionalUnitsListProps {
   data: SingleDayResponse;
@@ -10,6 +11,7 @@ interface AdditionalUnitsListProps {
 
 export const AdditionalSingleDayUnitsList = (props: AdditionalUnitsListProps) => {
   const { data } = props;
+  const { t } = useTranslation();
   const [showMore, setShowMore] = useState(false);
 
   const toggleShowMore = () => {
@@ -20,11 +22,14 @@ export const AdditionalSingleDayUnitsList = (props: AdditionalUnitsListProps) =>
     <>
       {showMore && (
         <View>
-          <UnitItem property="Wind" value={data.wind.speed} unit="mph" />
-          <UnitItem property="Clouds" value={data.clouds.all} unit="%" />
+          <UnitItem property={t("units.wind")} value={data.wind.speed} unit="mph" />
+          <UnitItem property={t("units.clouds")} value={data.clouds.all} unit="%" />
         </View>
       )}
-      <Button title={showMore ? "Hide" : "Show more"} onPress={toggleShowMore} />
+      <Button
+        title={showMore ? t("buttons.toggleHideButton") : t("buttons.toggleShowButton")}
+        onPress={toggleShowMore}
+      />
     </>
   );
 };

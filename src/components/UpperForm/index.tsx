@@ -2,12 +2,14 @@ import { View, TextInput, StyleSheet } from "react-native";
 import { useEffect, useState } from "react";
 import { Button } from "../shared";
 import { UseAsyncStorage } from "../../hook";
+import { useTranslation } from "react-i18next";
 
 interface UpperFormProps {
   handleSearch: (city: string) => void;
 }
 
 export const UpperForm = (props: UpperFormProps) => {
+  const { t } = useTranslation();
   const { storedCity } = UseAsyncStorage();
   const { handleSearch } = props;
   const [city, setCity] = useState("");
@@ -24,7 +26,11 @@ export const UpperForm = (props: UpperFormProps) => {
   return (
     <View style={styles.form}>
       <TextInput style={styles.input} onChangeText={handleCity} value={city} />
-      <Button disabled={city.length < 3} title="Search city" onPress={() => handleSearch(city)} />
+      <Button
+        disabled={city.length < 3}
+        title={t("buttons.inputButton")}
+        onPress={() => handleSearch(city)}
+      />
     </View>
   );
 };
