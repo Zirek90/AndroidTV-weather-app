@@ -74,8 +74,8 @@ const styles = StyleSheet.create({
   },
   wrapper: {
     width: 300,
-    height: 375,
-    justifyContent: "space-evenly",
+    height: 400,
+    padding: 10,
     alignItems: "center",
   },
   icon: {

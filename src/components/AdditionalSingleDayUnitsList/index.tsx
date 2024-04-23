@@ -1,4 +1,4 @@
-import { View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { useState } from "react";
 import { UnitItem } from "../UnitItem";
 import { Button } from "../shared";
@@ -26,10 +26,18 @@ export const AdditionalSingleDayUnitsList = (props: AdditionalUnitsListProps) =>
           <UnitItem property={t("units.clouds")} value={data.clouds.all} unit="%" />
         </View>
       )}
+
       <Button
         title={showMore ? t("buttons.toggleHideButton") : t("buttons.toggleShowButton")}
         onPress={toggleShowMore}
+        buttonStyles={styles.button}
       />
     </>
   );
 };
+
+const styles = StyleSheet.create({
+  button: {
+    marginTop: 5,
+  },
+});
