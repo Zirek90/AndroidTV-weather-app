@@ -14,8 +14,7 @@ export const Button = (props: PressableProps) => {
     <Pressable
       disabled={disabled}
       style={[styles.button, buttonStyles, disabled && styles.disabledButton]}
-      onPress={onPress}
-      onFocus={onPress}>
+      onPress={onPress}>
       <Text style={[styles.text, textStyles, disabled && styles.disabledText]}>{title}</Text>
     </Pressable>
   );

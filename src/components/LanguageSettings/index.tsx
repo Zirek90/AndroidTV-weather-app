@@ -4,12 +4,15 @@ import { LanguageEnum } from "../../enum";
 import i18n from "../../i18n";
 import { useTranslation } from "react-i18next";
 import { availableLanguages } from "../../utils";
+import { UseAsyncStorage } from "../../hook";
 
 export const LanguageSettings = () => {
   const { t } = useTranslation();
+  const { setData } = UseAsyncStorage();
 
   const handleLanguageChange = (code: LanguageEnum) => {
     i18n.changeLanguage(code);
+    setData("language", code);
   };
   return (
     <View>
@@ -18,8 +21,7 @@ export const LanguageSettings = () => {
         <Pressable
           style={styles.wrapper}
           key={language.code}
-          onPress={() => handleLanguageChange(language.code)}
-          onFocus={() => handleLanguageChange(language.code)}>
+          onPress={() => handleLanguageChange(language.code)}>
           <Image style={styles.image} source={language.image} />
           <Text style={[styles.textColor, styles.textFont]}>{language.name}</Text>
         </Pressable>

@@ -25,7 +25,7 @@ export const WeatherWrapper = (props: WeatherWrapperProps) => {
   const handleSearch = useCallback(
     (city: string) => {
       setSearchedCity(city);
-      setData(city);
+      setData("city", city);
     },
     [setData],
   );
