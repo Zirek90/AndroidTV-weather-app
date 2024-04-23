@@ -13,7 +13,7 @@ export const translations = {
 
 i18n.use(initReactI18next).init({
   compatibilityJSON: "v3",
-  lng: LanguageEnum.EN,
+  lng: LanguageEnum.PL,
   fallbackLng: LanguageEnum.EN,
   resources: translations,
   interpolation: {

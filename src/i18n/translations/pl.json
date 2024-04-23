@@ -2,7 +2,8 @@
   "buttons": {
     "inputButton": "Znajdź miasto",
     "toggleHideButton": "Ukryj",
-    "toggleShowButton": "Pokaż więcej"
+    "toggleShowButton": "Pokaż więcej",
+    "close": "Zamknij"
   },
   "units": {
     "temperature": "Temperatura",
@@ -26,5 +27,13 @@
     "thursday": "Czwartek",
     "friday": "Piątek",
     "saturday": "Sobota"
+  },
+  "languages": {
+    "header": "Języki",
+    "languageList": {
+      "english": "Angielski",
+      "polish": "Polski",
+      "indonesian": "Indonezyjski"
+    }
   }
 }

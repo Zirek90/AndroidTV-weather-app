@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   blurView: {
-    borderRadius: 25,
+    borderRadius: 15,
     overflow: "hidden",
   },
   wrapper: {

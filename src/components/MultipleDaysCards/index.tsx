@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   blurView: {
-    borderRadius: 25,
+    borderRadius: 15,
     overflow: "hidden",
   },
   blueViewWrapper: {

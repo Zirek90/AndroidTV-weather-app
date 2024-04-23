@@ -2,7 +2,8 @@
   "buttons": {
     "inputButton": "Search city",
     "toggleHideButton": "Hide",
-    "toggleShowButton": "Show more"
+    "toggleShowButton": "Show more",
+    "close": "Close"
   },
   "units": {
     "temperature": "Temperature",
@@ -26,5 +27,13 @@
     "thursday": "Thursday",
     "friday": "Friday",
     "saturday": "Saturday"
+  },
+  "languages": {
+    "header": "Languages",
+    "languageList": {
+      "english": "English",
+      "polish": "Polish",
+      "indonesian": "Indonesian"
+    }
   }
 }

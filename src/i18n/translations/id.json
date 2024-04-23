@@ -2,7 +2,8 @@
   "buttons": {
     "inputButton": "Cari kota",
     "toggleHideButton": "Bersembunyi",
-    "toggleShowButton": "Menampilkan lebih banyak"
+    "toggleShowButton": "Menampilkan lebih banyak",
+    "close": "Menutup"
   },
   "units": {
     "temperature": "Suhu",
@@ -26,5 +27,13 @@
     "thursday": "Kamis",
     "friday": "Jumat",
     "saturday": "Sabtu"
+  },
+  "languages": {
+    "header": "Bahasa",
+    "languageList": {
+      "english": "Inggris",
+      "polish": "Polandia",
+      "indonesian": "Indonesia"
+    }
   }
 }
