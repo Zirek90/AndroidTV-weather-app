@@ -41,8 +41,8 @@ export const AdditionalMultipleDaysUnitList = (props: AdditionalMultipleDaysUnit
 
 const styles = StyleSheet.create({
   button: {
-    width: 75,
-    height: 25,
+    width: 85,
+    height: 35,
   },
   buttonText: {
     fontSize: 12,

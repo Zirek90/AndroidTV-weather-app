@@ -20,8 +20,8 @@ export const MultipleDaysCard = (props: MultipleDaysCardProps) => {
 
 const styles = StyleSheet.create({
   container: {
-    width: 90,
-    margin: 10,
+    width: 105,
+    margin: 5,
     alignItems: "center",
   },
 });

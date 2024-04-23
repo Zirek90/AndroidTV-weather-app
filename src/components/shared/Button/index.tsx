@@ -25,8 +25,8 @@ const styles = StyleSheet.create({
   button: {
     alignItems: "center",
     justifyContent: "center",
-    height: 35,
-    width: 100,
+    height: 45,
+    width: 125,
     borderRadius: 5,
     backgroundColor: "rgba(255, 255, 255, 0.2)",
     borderWidth: 1,
@@ -36,6 +36,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
     color: "rgb(256, 256, 256)",
+    textAlign: "center",
   },
   disabledButton: {
     backgroundColor: "rgba(255, 255, 255, 0.1)",
