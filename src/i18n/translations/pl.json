@@ -1,0 +1,39 @@
+{
+  "buttons": {
+    "inputButton": "Znajdź miasto",
+    "toggleHideButton": "Ukryj",
+    "toggleShowButton": "Pokaż więcej",
+    "close": "Zamknij"
+  },
+  "units": {
+    "temperature": "Temperatura",
+    "feels_like": "Odczuwalna",
+    "minimal": "Minimalna",
+    "maximum": "Maksymalna",
+    "pressure": "Ciśnienie",
+    "humidity": "Wilgotność",
+    "wind": "Wiatr",
+    "clouds": "Zachmurzenie"
+  },
+  "errors": {
+    "updateAlertError": "Nie można pobrać najnowszej aktualizacji: ",
+    "fetchError": "Nie można pobrać pogody dla podanego miasta"
+  },
+  "weekdays": {
+    "sunday": "Niedziela",
+    "monday": "Poniedziałek",
+    "tuesday": "Wtorek",
+    "wednesday": "Środa",
+    "thursday": "Czwartek",
+    "friday": "Piątek",
+    "saturday": "Sobota"
+  },
+  "languages": {
+    "header": "Języki",
+    "languageList": {
+      "english": "Angielski",
+      "polish": "Polski",
+      "indonesian": "Indonezyjski"
+    }
+  }
+}

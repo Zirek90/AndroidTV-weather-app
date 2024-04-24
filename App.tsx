@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import * as Updates from "expo-updates";
 import { WeatherWrapper } from "./src/components/WeatherWrapper";
 import * as SplashScreen from "expo-splash-screen";
+import "./src/i18n";
 
 export default function App() {
   const queryClient = new QueryClient();
@@ -11,7 +12,7 @@ export default function App() {
 
   useEffect(() => {
     async function prepare() {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 1000));
       setAppIsReady(true);
     }
 

@@ -1,7 +1,7 @@
 import { StyleSheet, View } from "react-native";
-import { AdditionalMultipleDaysUnitList } from "../AdditinalMultipleDaysUnitList";
-import { MultipleDaysHeader } from "../MultipleDaysHeader";
-import { MultipleDaysListResponse } from "../../interface";
+import { AdditionalMultipleDaysUnitList } from "./AdditinalMultipleDaysUnitList";
+import { MultipleDaysHeader } from "./MultipleDaysHeader";
+import { MultipleDaysListResponse } from "../../../interface";
 
 interface MultipleDaysCardProps {
   item: MultipleDaysListResponse;
@@ -20,8 +20,8 @@ export const MultipleDaysCard = (props: MultipleDaysCardProps) => {
 
 const styles = StyleSheet.create({
   container: {
-    width: 90,
-    margin: 10,
+    width: 105,
+    margin: 5,
     alignItems: "center",
   },
 });

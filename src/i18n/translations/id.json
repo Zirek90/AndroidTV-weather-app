@@ -1,0 +1,39 @@
+{
+  "buttons": {
+    "inputButton": "Cari kota",
+    "toggleHideButton": "Bersembunyi",
+    "toggleShowButton": "Menampilkan lebih banyak",
+    "close": "Menutup"
+  },
+  "units": {
+    "temperature": "Suhu",
+    "feels_like": "Terasa seperti",
+    "minimal": "Minimal",
+    "maximum": "Maksimum",
+    "pressure": "Tekanan",
+    "humidity": "Kelembaban",
+    "wind": "Angin",
+    "clouds": "Awan"
+  },
+  "errors": {
+    "updateAlertError": "Terjadi kesalahan saat mengambil pembaruan Expo terbaru: ",
+    "fetchError": "Tidak dapat mengambil cuaca untuk kota tertentu"
+  },
+  "weekdays": {
+    "sunday": "Minggu",
+    "monday": "Senin",
+    "tuesday": "Selasa",
+    "wednesday": "Rabu",
+    "thursday": "Kamis",
+    "friday": "Jumat",
+    "saturday": "Sabtu"
+  },
+  "languages": {
+    "header": "Bahasa",
+    "languageList": {
+      "english": "Inggris",
+      "polish": "Polandia",
+      "indonesian": "Indonesia"
+    }
+  }
+}

@@ -1,8 +1,8 @@
 import { StyleSheet } from "react-native";
 import { useState } from "react";
-import { Button } from "../shared";
-import { UnitsList } from "../UnitsList";
-import { MultipleDaysListResponse, SingleDayResponse } from "../../interface";
+import { Button, UnitsList } from "../../../shared";
+import { MultipleDaysListResponse, SingleDayResponse } from "../../../../interface";
+import { useTranslation } from "react-i18next";
 
 interface AdditionalMultipleDaysUnitListProps {
   idx: number;
@@ -11,6 +11,7 @@ interface AdditionalMultipleDaysUnitListProps {
 
 export const AdditionalMultipleDaysUnitList = (props: AdditionalMultipleDaysUnitListProps) => {
   const { idx, item } = props;
+  const { t } = useTranslation();
   const [shownIdx, setShownIdx] = useState([]);
   const handleShownIdx = (currentIdx: number) => {
     setShownIdx(prev =>
@@ -22,7 +23,9 @@ export const AdditionalMultipleDaysUnitList = (props: AdditionalMultipleDaysUnit
   return (
     <>
       <Button
-        title={shownIdx.includes(idx) ? "Hide" : "Show more"}
+        title={
+          shownIdx.includes(idx) ? t("buttons.toggleHideButton") : t("buttons.toggleShowButton")
+        }
         onPress={() => handleShownIdx(idx)}
         buttonStyles={styles.button}
         textStyles={styles.buttonText}
@@ -37,8 +40,8 @@ export const AdditionalMultipleDaysUnitList = (props: AdditionalMultipleDaysUnit
 
 const styles = StyleSheet.create({
   button: {
-    width: 75,
-    height: 25,
+    width: 85,
+    height: 35,
   },
   buttonText: {
     fontSize: 12,
