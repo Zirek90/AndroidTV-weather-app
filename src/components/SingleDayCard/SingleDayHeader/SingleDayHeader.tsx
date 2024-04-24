@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, Image } from "react-native";
-import { getDate, getDateOfTheWeek } from "../../utils";
+import { getDate, getDateOfTheWeek } from "../../../utils";
 
 interface SingleDayHeaderProps {
   icon: string;

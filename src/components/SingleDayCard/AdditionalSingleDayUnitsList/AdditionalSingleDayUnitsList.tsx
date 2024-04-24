@@ -1,8 +1,7 @@
 import { StyleSheet, View } from "react-native";
 import { useState } from "react";
-import { UnitItem } from "../UnitItem";
-import { Button } from "../shared";
-import { SingleDayResponse } from "../../interface";
+import { Button, UnitItem } from "../../shared";
+import { SingleDayResponse } from "../../../interface";
 import { useTranslation } from "react-i18next";
 
 interface AdditionalUnitsListProps {

@@ -1,6 +1,6 @@
 import { View } from "react-native";
 import { UnitItem } from "../UnitItem";
-import { MultipleDaysListResponse, SingleDayResponse } from "../../interface";
+import { MultipleDaysListResponse, SingleDayResponse } from "../../../interface";
 import { useTranslation } from "react-i18next";
 
 interface UnitsListProps {

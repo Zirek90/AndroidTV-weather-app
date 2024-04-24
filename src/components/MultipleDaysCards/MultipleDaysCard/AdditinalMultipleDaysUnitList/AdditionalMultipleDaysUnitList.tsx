@@ -1,8 +1,7 @@
 import { StyleSheet } from "react-native";
 import { useState } from "react";
-import { Button } from "../shared";
-import { UnitsList } from "../UnitsList";
-import { MultipleDaysListResponse, SingleDayResponse } from "../../interface";
+import { Button, UnitsList } from "../../../shared";
+import { MultipleDaysListResponse, SingleDayResponse } from "../../../../interface";
 import { useTranslation } from "react-i18next";
 
 interface AdditionalMultipleDaysUnitListProps {

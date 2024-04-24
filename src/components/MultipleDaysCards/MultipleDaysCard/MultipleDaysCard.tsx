@@ -1,7 +1,7 @@
 import { StyleSheet, View } from "react-native";
-import { AdditionalMultipleDaysUnitList } from "../AdditinalMultipleDaysUnitList";
-import { MultipleDaysHeader } from "../MultipleDaysHeader";
-import { MultipleDaysListResponse } from "../../interface";
+import { AdditionalMultipleDaysUnitList } from "./AdditinalMultipleDaysUnitList";
+import { MultipleDaysHeader } from "./MultipleDaysHeader";
+import { MultipleDaysListResponse } from "../../../interface";
 
 interface MultipleDaysCardProps {
   item: MultipleDaysListResponse;
